@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Spring Nashorn isomorphic handlebars</title>
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div>
+    <p>Layout Text : {{ text}}</p>
+</div>
+<div id="layer">
+    {{{layer}}}
+</div>
+<a href="javascript:;" id = "call">client call</a>
+<script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+<script src="/webjars/handlebars/4.0.5/handlebars.min.js"></script>
+<script src="/js/templates.js"></script>
+<script>
+    var $layer = $('#layer');
+    $('#call').click(function() {
+        $.ajax({
+            'url': '/rest',
+            'type': 'GET',
+            'dataType': 'json',
+            'success': function (data) {
+                $layer.html(Handlebars.templates['layer'](data));
+            }
+        });
+    });
+</script>
+</body>
+</html>
