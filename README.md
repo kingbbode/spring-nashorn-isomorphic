@@ -4,4 +4,4 @@
 > use Nahsorn!
 
 * *2016-09-22*  
-* [Kingbbode Git Page](kingbbode.github.io)
+* [Kingbbode Git Page](http://kingbbode.github.io)
