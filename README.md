@@ -4,4 +4,4 @@ Kingbbode - nashorn isomorphic
 * [Handlebars](https://github.com/kingbbode/spring-nashorn-isomorphic/tree/handlebars)
 
 
-[Kingbbode Git Page](kingbbode.github.io)
+[Kingbbode Git Page](http://kingbbode.github.io)
